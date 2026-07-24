@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEASI Institute of Information Technology</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #003366;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: gold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        nav ul li a:hover {
+            color: gold;
+        }
+
+        /* Hero */
+
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0, 51, 102, .75), rgba(0, 51, 102, .75)),
+                url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background: gold;
+            color: #003366;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .btn:hover {
+            background: orange;
+        }
+
+        /* Common */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .title {
+            text-align: center;
+            color: #003366;
+            font-size: 38px;
+            margin-bottom: 40px;
+        }
+
+        /* About */
+
+        .about-content {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .about-content img {
+            flex: 1;
+            min-width: 300px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Courses */
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .course {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            transition: .3s;
+        }
+
+        .course:hover {
+            transform: translateY(-8px);
+        }
+
+        .course h3 {
+            color: #003366;
+            margin-bottom: 15px;
+        }
+
+        /* Facilities */
+
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .facility {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        /* Admissions */
+
+        .admission {
+            background: #003366;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            padding: 60px;
+        }
+
+        .admission h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Contact */
+
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .contact-box {
+            flex: 1;
+            min-width: 280px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+        }
+
+        /* Footer */
+
+        footer {
+            background: #002244;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width:768px) {
+
+            header {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            APNA <span>College</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#admission">Admissions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Home -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Apna College</h1>
+
+            <p>
+                Empowering students with knowledge, innovation,
+                leadership, and technology for a successful future.
+            </p>
+
+            <a href="#courses" class="btn">Explore Courses</a>
+
+            <a href="#admission" class="btn">Apply Now</a>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+
+    <section id="about">
+
+        <h2 class="title">About Our College</h2>
+
+        <div class="about-content">
+
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=900&q=80">
+
+            <div class="about-text">
+
+                <p>
+                    Apna College is one of the
+                    leading institutions dedicated to excellence in education.
+                    The college provides world-class infrastructure,
+                    experienced faculty, modern laboratories, digital libraries,
+                    placement support, and industry-oriented learning.
+                </p>
+
+                <br>
+
+                <p>
+                    Our vision is to prepare students with practical knowledge,
+                    leadership qualities, and innovative thinking for the global
+                    technology industry.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Courses -->
+
+    <section id="courses">
+
+        <h2 class="title">Our Courses</h2>
+
+        <div class="course-grid">
+
+            <div class="course">
+                <h3>B.Sc Computer Science</h3>
+                <p>Programming, Networking and Software Development.</p>
+            </div>
+
+            <div class="course">
+                <h3>BCA</h3>
+                <p>Application Development & Database Systems.</p>
+            </div>
+
+            <div class="course">
+                <h3>M.Sc Information Technology</h3>
+                <p>Advanced Computing & Cloud Technologies.</p>
+            </div>
+
+            <div class="course">
+                <h3>Diploma in Web Development</h3>
+                <p>HTML, CSS, JavaScript & Responsive Design.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Facilities -->
+
+    <section>
+
+        <h2 class="title">Campus Facilities</h2>
+
+        <div class="facility-grid">
+
+            <div class="facility">
+                <h3>Computer Labs</h3>
+            </div>
+
+            <div class="facility">
+                <h3>Digital Library</h3>
+            </div>
+
+            <div class="facility">
+                <h3>Wi-Fi Campus</h3>
+            </div>
+
+            <div class="facility">
+                <h3>Sports Complex</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Admissions -->
+
+    <section id="admission">
+
+        <div class="admission">
+
+            <h2>Admissions Open 2026-2027</h2>
+
+            <p>
+                Join Apna College and build your
+                career with quality education and excellent placement opportunities.
+            </p>
+
+            <a href="#contact" class="btn">Contact Admission Office</a>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <h2 class="title">Contact Us</h2>
+
+        <div class="contact-grid">
+
+            <div class="contact-box">
+
+                <h3>Address</h3>
+
+                <p>
+                    Apna College<br>
+                    87, Peters Road,<br>
+                    Royapettah,<br>
+                    Chennai – 600014
+                </p>
+
+            </div>
+
+            <div class="contact-box">
+
+                <h3>Contact Details</h3>
+
+                <p>Email : info@measiit.edu</p>
+
+                <p>Phone : +91 98765 43210</p>
+
+                <p>Website : www.apnacollege.edu</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Apna College | All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
